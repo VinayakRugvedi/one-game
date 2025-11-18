@@ -1,5 +1,4 @@
-import "@repo/ui/styles.css";
-import "./globals.css";
+import "@repo/ui/global.css";
 import type { Metadata } from "next";
 import { Space_Grotesk as SpaceGrotesk } from "next/font/google";
 
@@ -17,11 +16,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={spaceGrotesk.className}>
-        {/* Header component here */}
-        <div>{children}</div>
-        {/* Footer component here */}
+    <html lang="en" className="dark" style={{ colorScheme: "dark" }}>
+      <body className={`${spaceGrotesk.className}`}>
+        <div className="bg-background text-foreground min-h-svh">
+          {/* Header component here */}
+          <div>{children}</div>
+          {/* Footer component here */}
+        </div>
       </body>
     </html>
   );
