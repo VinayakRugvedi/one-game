@@ -2,6 +2,9 @@ import "@repo/ui/global.css";
 import type { Metadata } from "next";
 import { Space_Grotesk as SpaceGrotesk } from "next/font/google";
 
+import Header from "./components/header";
+import Footer from "./components/footer";
+
 const spaceGrotesk = SpaceGrotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -19,9 +22,9 @@ export default function RootLayout({
     <html lang="en" className="dark" style={{ colorScheme: "dark" }}>
       <body className={`${spaceGrotesk.className}`}>
         <div className="bg-background text-foreground min-h-svh">
-          {/* Header component here */}
-          <div>{children}</div>
-          {/* Footer component here */}
+          <Header />
+          <div className="min-h-screen">{children}</div>
+          <Footer />
         </div>
       </body>
     </html>
