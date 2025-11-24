@@ -1,5 +1,5 @@
 import "@repo/ui/global.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Space_Grotesk as SpaceGrotesk } from "next/font/google";
 
 import Header from "@/components/header";
@@ -12,8 +12,28 @@ const spaceGrotesk = SpaceGrotesk({
 
 export const metadata: Metadata = {
   title: "One Game",
-  description: "The internet's most minimal and premium board game.",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+  description:
+    "The internet's most minimal and premium board game. Introducing Bingo.",
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({
@@ -27,8 +47,8 @@ export default function RootLayout({
       className="dark antialiased scroll-smooth"
       style={{ colorScheme: "dark" }}
     >
-      <body className={`${spaceGrotesk.className} font-space`}>
-        <div className="bg-background text-foreground min-h-svh">
+      <body className={`${spaceGrotesk.className}`}>
+        <div className="bg-background text-foreground min-h-svh overflow-hidden">
           <Header />
           <div className="min-h-screen">{children}</div>
           <Footer />
