@@ -1,19 +1,20 @@
-import { Gradient } from "@repo/ui/gradient";
-import Board from "./board";
+import Hero from "./sections/hero";
+import BrandPhilosophy from "./sections/brand-philosophy";
+import HowToPlay from "./sections/how-to-play";
+import LetsBingo from "./sections/lets-bingo";
+
+import "./style.css";
 
 export default function Page() {
   return (
-    <main className="main">
-      <div className="flex justify-between items-center min-h-screen p-6 flex-col gap-3">
-        <Board />
-        <h1 className="text-9xl">One Game</h1>
-        {/* <div className="flex justify-center items-center relative">
-          <Gradient
-            className="top-[100px] opacity-[0.15] w-[1000px] h-[1000px]"
-            conic
-          />
-        </div> */}
-      </div>
+    <main className="overflow-hidden max-w-7xl mx-auto p-6 lg:px-8">
+      <Hero />
+
+      <BrandPhilosophy />
+
+      <HowToPlay />
+
+      <LetsBingo />
     </main>
   );
 }
