@@ -13,15 +13,15 @@ export default function HowToPlay() {
       <div className="grid grid-rows-1 grid-cols-3 mt-6 w-full gap-6">
         <div>
           <div className="grid grid-rows-3 grid-cols-3 gap-[10px] w-[230px] h-[230px] [clip-path:rect(33px_196px_105%_-5%_round_10px)]">
-            <Tile shouldDisableHover />
-            <Tile shouldDisableHover />
-            <Tile shouldDisableHover />
-            <Tile shouldDisableHover />
-            <Tile shouldDisableHover />
-            <Tile shouldDisableHover />
-            <Tile shouldDisableHover />
-            <Tile shouldDisableHover />
-            <Tile shouldDisableHover />
+            <Tile shouldDisableHover shouldDisableAnimation />
+            <Tile shouldDisableHover shouldDisableAnimation />
+            <Tile shouldDisableHover shouldDisableAnimation />
+            <Tile shouldDisableHover shouldDisableAnimation />
+            <Tile shouldDisableHover shouldDisableAnimation />
+            <Tile shouldDisableHover shouldDisableAnimation />
+            <Tile shouldDisableHover shouldDisableAnimation />
+            <Tile shouldDisableHover shouldDisableAnimation />
+            <Tile shouldDisableHover shouldDisableAnimation />
           </div>
 
           <h6 className="text-primary text-xl font-medium mt-2">Start</h6>
@@ -31,15 +31,15 @@ export default function HowToPlay() {
         </div>
         <div>
           <div className="grid grid-rows-3 grid-cols-3 gap-[10px] w-[230px] h-[230px] [clip-path:rect(33px_196px_105%_-5%_round_10px)]">
-            <Tile shouldDisableHover value={3} />
-            <Tile shouldDisableHover value={17} />
-            <Tile shouldDisableHover value={10} />
-            <Tile shouldDisableHover value={25} />
-            <Tile shouldDisableHover value={1} />
-            <Tile shouldDisableHover value={8} />
-            <Tile shouldDisableHover value={21} />
-            <Tile shouldDisableHover value={13} />
-            <Tile shouldDisableHover value={5} />
+            <Tile shouldDisableHover shouldDisableAnimation value={3} />
+            <Tile shouldDisableHover shouldDisableAnimation value={17} />
+            <Tile shouldDisableHover shouldDisableAnimation value={10} />
+            <Tile shouldDisableHover shouldDisableAnimation value={25} />
+            <Tile shouldDisableHover shouldDisableAnimation value={1} />
+            <Tile shouldDisableHover shouldDisableAnimation value={8} />
+            <Tile shouldDisableHover shouldDisableAnimation value={21} />
+            <Tile shouldDisableHover shouldDisableAnimation value={13} />
+            <Tile shouldDisableHover shouldDisableAnimation value={5} />
           </div>
 
           <h6 className="text-primary text-xl font-medium mt-2">Prepare</h6>
@@ -50,15 +50,30 @@ export default function HowToPlay() {
         </div>
         <div>
           <div className="grid grid-rows-3 grid-cols-3 gap-[10px] w-[230px] h-[230px] [clip-path:rect(33px_196px_105%_-5%_round_10px)]">
-            <Tile shouldDisableHover value={3} />
-            <Tile shouldDisableHover value={17} />
-            <Tile shouldDisableHover value={10} />
-            <Tile shouldDisableHover value={25} />
-            <Tile shouldDisableHover value={1} isMarked />
-            <Tile shouldDisableHover value={8} />
-            <Tile shouldDisableHover value={21} />
-            <Tile shouldDisableHover value={13} isMarked />
-            <Tile shouldDisableHover value={5} isMarked />
+            <Tile shouldDisableHover shouldDisableAnimation value={3} />
+            <Tile shouldDisableHover shouldDisableAnimation value={17} />
+            <Tile shouldDisableHover shouldDisableAnimation value={10} />
+            <Tile shouldDisableHover shouldDisableAnimation value={25} />
+            <Tile
+              shouldDisableHover
+              shouldDisableAnimation
+              value={1}
+              isMarked
+            />
+            <Tile shouldDisableHover shouldDisableAnimation value={8} />
+            <Tile shouldDisableHover shouldDisableAnimation value={21} />
+            <Tile
+              shouldDisableHover
+              shouldDisableAnimation
+              value={13}
+              isMarked
+            />
+            <Tile
+              shouldDisableHover
+              shouldDisableAnimation
+              value={5}
+              isMarked
+            />
           </div>
           <h6 className="text-primary text-xl font-medium mt-2">Mark</h6>
           <p className="w-90">

@@ -37,6 +37,7 @@ export default function DumbBoard({ canShowSelected = true }: DumbBoardProps) {
                   }
                   value={value}
                   shouldDisableHover={true}
+                  shouldDisableAnimation={true}
                 />
               );
             })}
